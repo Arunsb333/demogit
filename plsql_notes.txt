@@ -1,0 +1,62 @@
+BASICS OF PL/SQL
+
+-------------------------------------------------------------------------------------------------------
+<<parent>>        						         --to declare as parent block 
+DECLARE
+	l_var NUMBER;
+	
+BEGINS
+	NUMBER :=1;
+
+	DECLARE							        --sub block
+		l_var NUMBER;
+	BEGINS
+		NUMBER :=1;					
+		dbms_output.put_line(//l_var);
+		dbms_output.put_line(//parent.l_var)
+
+EXCEPTION
+	WHEN NO_DATA_FOUND
+	null;
+END;	
+
+
+/*
+1.always PL/SQL blocks starts with DECLARE-->BEGINS--> EXCEPTION-->END
+2.can have inner blocks 
+3.variable having same in inner block and outer block,--inner block will override the outer block variable.
+4. <<parent>> to declare the outer block and parent.l_var is used to get the value assigned in outer block when the variable is overridden by inner block.
+ 
+*/
+--------------------------------------------------
+PL/SQL Datatypes
+-->Scalar Datatypes
+-->Composite Datatypes
+-->reference Datatypes
+-->Other Datatypes
+
+Scalar Datatypes
+	1.Numeric
+		a.NUMBER
+		b.PLS
+	2.Character
+	3.Data Time & interval
+	4.Boolean
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	

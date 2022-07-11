@@ -1,0 +1,81 @@
+the 3 states of git
+-committed :the data is basically stored in local database
+-modified  :the data is modifeid but not yet commited
+-staged    :the modified file is marked to be path of next commit
+--all these is changes are stil local--
+
+--git usefull command lines---
+-$git	all starts with git
+-config	configure the tooling
+-init	intialize a git local repository
+-clone	download a project from remote
+-add	prepare a file(to staging)
+-commit	commit a file to the local repo
+------------------------------------------------------------------
+$ mkdir "c:\demo\examples"                            //to  create new directory
+
+	
+$ cd "c:\demo\examples"	                            																	
+
+
+$ git init
+Initialized empty Git repository in C:/demo/examples/.git/
+
+
+$ ls -la
+total 4
+drwxr-xr-x 1 arunsb 1049089 0 Jun 21 17:28 ./
+drwxr-xr-x 1 arunsb 1049089 0 Jun 21 17:28 ../
+drwxr-xr-x 1 arunsb 1049089 0 Jun 21 17:28 .git/
+
+
+$ git status
+On branch master
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+
+
+$ code redme.md
+
+
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        redme.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+
+$ git add redme.md
+
+
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   redme.md
+
+
+
+$ git commit -m "some commands"
+[master (root-commit) 7dd8556] some commands
+ 1 file changed, 1 insertion(+)
+ create mode 100644 redme.mdx
+================================================
+
+
+
+
+
+$ git status
+On branch master
+nothing to commit, working tree clean

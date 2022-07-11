@@ -1,0 +1,12 @@
+website
+1. json2ts: to convert json into typescript
+-----------
+building objects step by step
+2.use partial 
+--------
+uinon types instead of emuns
+-----
+Nullish coalescing operator(??)
+----
+path mapping to simplify verbose imports
+-----
